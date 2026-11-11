@@ -475,6 +475,7 @@ const CORS = {
   "access-control-allow-methods": "GET, POST, OPTIONS",
   "access-control-expose-headers": "www-authenticate, payment-receipt",
   "x-content-type-options": "nosniff",
+  link: '</openapi.json>; rel="service-desc", </llms.txt>; rel="describedby"',
 };
 
 const listener = MppxRequest.toNodeListener(async (request) => {
