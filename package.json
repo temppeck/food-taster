@@ -1,0 +1,21 @@
+{
+  "name": "food-taster",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.mjs"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "type": "module",
+  "dependencies": {
+    "@anthropic-ai/sdk": "^1.8.0",
+    "mppx": "^0.18.0"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
