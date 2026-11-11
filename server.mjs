@@ -9,8 +9,9 @@ import { generate as generateOpenApi } from "mppx/discovery";
 import Anthropic from "@anthropic-ai/sdk";
 
 // ---------- config ----------
-const PORT = Number(process.env.PORT) || 4110;
-const HOST = process.env.HOST || (process.env.PORT ? "0.0.0.0" : "127.0.0.1");
+const PORT = Number(process.env.PORT) || (process.env.RAILWAY_ENVIRONMENT ? 8080 : 4110);
+const ON_HOST = Boolean(process.env.RAILWAY_ENVIRONMENT || process.env.PORT);
+const HOST = process.env.HOST || (ON_HOST ? "::" : "127.0.0.1"); // public bind only on the host
 const PRICE = process.env.PRICE_USD || "0.01";
 const MODEL = process.env.TASTER_MODEL || "claude-opus-5-5";
 const TESTNET = process.env.TEMPO_MAINNET !== "true";
